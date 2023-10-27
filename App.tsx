@@ -1,19 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import Question from './Question';
 
 export default function App() {
   return (
     <View style={styles.container}>
-          <View style={styles.contentContainer}>
             <Image
                 style={styles.headerImage}
-                source={require('./assets/logorectangle.png')}
+                source={require('./assets/rectangle-white.png')}
             />
-            <Text style={{fontSize: 35, color: '#e4e6eb', marginBottom: 45}}>AlgoRhythm</Text>
+            <Text style={styles.titleContainer}>AlgoRhythm</Text>
+
+            <View style={styles.contentContainer}>
+            <Question />
           
-            <Text style={styles.baseText}>Just messing around here... I wanted to see what the process of styling was like, both inline and using sheets... Adding components. That kind of thing.</Text>
-          
-            <Text style={{marginTop: 45, color: '#e4e6eb'}}>Feel free to delete any of this please.</Text>
+            <Text>Just messing around here... I wanted to see what the process of styling was like, both inline and using sheets... Adding components. That kind of thing.</Text>
+        
           </View>
       <StatusBar style="auto" />
     </View>
@@ -26,11 +28,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#001549',
     alignItems: 'center',
     justifyContent: 'start',
-    paddingTop: '20%'
+    paddingTop: '15%',
+  },
+  titleContainer:{
+    fontSize: 35,
+    color: '#e4e6eb',
+    paddingBottom: '10%'
   },
   contentContainer: {
-    width: '70%',
     alignItems: 'center',
+    backgroundColor: '#e4e6eb',
+    color: 'black',
+    height: '100%',
+    padding: '10%'
 //    borderWidth: 3,
   },
   baseText: {
